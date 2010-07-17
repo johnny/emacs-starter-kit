@@ -1,0 +1,3 @@
+[submodule "custom/plugins/auto-complete"]
+	path = custom/plugins/auto-complete
+	url = git://github.com/m2ym/auto-complete.git
