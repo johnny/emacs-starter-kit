@@ -1,0 +1,3 @@
+#name : property: function
+# --
+${1:property}: function (${2:arguments}){$0},
