@@ -1,6 +1,13 @@
 ;;; additional ruby file types
 (add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
 
+;; fonts
+(font-lock-add-keywords
+ 'ruby-mode
+ '(("\\<\\(attr_accessor\\|attr_reader\\|attr_writer\\|extend\\|include\\|require\\)\\>" 1 font-lock-keyword-face))
+ '(("\\<\\(FIXME\\|TODO\\|OPTIMIZE\\):" 1 font-lock-warning-face)))
+
+
 ;;mode-compile
 (autoload 'mode-compile "mode-compile"
   "Command to compile current buffer file based on the major mode" t)
