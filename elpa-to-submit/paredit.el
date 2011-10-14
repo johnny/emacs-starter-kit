@@ -281,30 +281,30 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
 (progn (setq paredit-commands
  `(
    "Basic Insertion Commands"
-   ("("         paredit-open-round
-                ("(a b |c d)"
-                 "(a b (|) c d)")
-                ("(foo \"bar |baz\" quux)"
-                 "(foo \"bar (|baz\" quux)"))
-   (")"         paredit-close-round
-                ("(a b |c   )" "(a b c)|")
-                ("; Hello,| world!"
-                 "; Hello,)| world!"))
-   ("M-)"       paredit-close-round-and-newline
-                ("(defun f (x|  ))"
-                 "(defun f (x)\n  |)")
-                ("; (Foo.|"
-                 "; (Foo.)|"))
-   ("["         paredit-open-square
-                ("(a b |c d)"
-                 "(a b [|] c d)")
-                ("(foo \"bar |baz\" quux)"
-                 "(foo \"bar [baz\" quux)"))
-   ("]"         paredit-close-square
-                ("(define-key keymap [frob|  ] 'frobnicate)"
-                 "(define-key keymap [frob]| 'frobnicate)")
-                ("; [Bar.|"
-                 "; [Bar.]|"))
+   ;; ("("         paredit-open-round
+   ;;              ("(a b |c d)"
+   ;;               "(a b (|) c d)")
+   ;;              ("(foo \"bar |baz\" quux)"
+   ;;               "(foo \"bar (|baz\" quux)"))
+   ;; (")"         paredit-close-round
+   ;;              ("(a b |c   )" "(a b c)|")
+   ;;              ("; Hello,| world!"
+   ;;               "; Hello,)| world!"))
+   ;; ("M-)"       paredit-close-round-and-newline
+   ;;              ("(defun f (x|  ))"
+   ;;               "(defun f (x)\n  |)")
+   ;;              ("; (Foo.|"
+   ;;               "; (Foo.)|"))
+   ;; ("["         paredit-open-square
+   ;;              ("(a b |c d)"
+   ;;               "(a b [|] c d)")
+   ;;              ("(foo \"bar |baz\" quux)"
+   ;;               "(foo \"bar [baz\" quux)"))
+   ;; ("]"         paredit-close-square
+   ;;              ("(define-key keymap [frob|  ] 'frobnicate)"
+   ;;               "(define-key keymap [frob]| 'frobnicate)")
+   ;;              ("; [Bar.|"
+   ;;               "; [Bar.]|"))
    ("\""        paredit-doublequote
                 ("(frob grovel |full lexical)"
                  "(frob grovel \"|\" full lexical)")
@@ -349,22 +349,22 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
                           "\n            port))")))
 
    "Deleting & Killing"
-   (("C-d" ,@paredit-forward-delete-keys)
-                paredit-forward-delete
-                ("(quu|x \"zot\")" "(quu| \"zot\")")
-                ("(quux |\"zot\")"
-                 "(quux \"|zot\")"
-                 "(quux \"|ot\")")
-                ("(foo (|) bar)" "(foo | bar)")
-                ("|(foo bar)" "(|foo bar)"))
-   (,paredit-backward-delete-key
-                paredit-backward-delete
-                ("(\"zot\" q|uux)" "(\"zot\" |uux)")
-                ("(\"zot\"| quux)"
-                 "(\"zot|\" quux)"
-                 "(\"zo|\" quux)")
-                ("(foo (|) bar)" "(foo | bar)")
-                ("(foo bar)|" "(foo bar|)"))
+   ;; (("C-d" ,@paredit-forward-delete-keys)
+   ;;              paredit-forward-delete
+   ;;              ("(quu|x \"zot\")" "(quu| \"zot\")")
+   ;;              ("(quux |\"zot\")"
+   ;;               "(quux \"|zot\")"
+   ;;               "(quux \"|ot\")")
+   ;;              ("(foo (|) bar)" "(foo | bar)")
+   ;;              ("|(foo bar)" "(|foo bar)"))
+   ;; (,paredit-backward-delete-key
+   ;;              paredit-backward-delete
+   ;;              ("(\"zot\" q|uux)" "(\"zot\" |uux)")
+   ;;              ("(\"zot\"| quux)"
+   ;;               "(\"zot|\" quux)"
+   ;;               "(\"zo|\" quux)")
+   ;;              ("(foo (|) bar)" "(foo | bar)")
+   ;;              ("(foo bar)|" "(foo bar|)"))
    ("C-k"       paredit-kill
                 ("(foo bar)|     ; Useless comment!"
                  "(foo bar)|")
