@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: fin
+# --
+for(${1:field} in ${2:object}){
+  if($2.hasOwnProperty($1)){
+    $0
+  }
+}

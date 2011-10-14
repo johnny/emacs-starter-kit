@@ -1,6 +1,12 @@
 ;;; additional ruby file types
 (add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
 
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (setq yas/buffer-local-condition
+                   '(if (ruby-in-string/comment)
+                        '(require-snippet-condition . force-in-comment)
+                      t))))
 ;; fonts
 (font-lock-add-keywords
  'ruby-mode

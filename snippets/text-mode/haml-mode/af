@@ -1,0 +1,3 @@
+#name : attachement field
+# --
+= attachment_field :${1:property}, :label => _("${2:Class} ${1:$(underscore-to-space text)}")$0

@@ -62,5 +62,6 @@ character typed."
 
 (global-set-key (kbd "C-c f") 'gpicker-find-file)
 (global-set-key (kbd "C-c C-f") 'gpicker-visit-project)
+(global-set-key (kbd "C-c b") 'bookmark-ido-find-file)
 
 (provide 'custom-bindings)
