@@ -227,7 +227,7 @@
 (defun rspec-verify-single ()
   "Runs the specified example at the point of the current buffer."
   (interactive)
-  (rspec-run-single-file (rspec-spec-file-for (buffer-file-name)) (rspec-core-options ()) (concat "--line " (number-to-string (line-number-at-pos)))))
+  (rspec-run-single-file (rspec-spec-file-for (buffer-file-name)) (concat "--line " (number-to-string (line-number-at-pos)))))
 
 (defun rspec-verify-all ()
   "Runs the 'spec' rake task for the project of the current file."
@@ -345,7 +345,7 @@
   "Returns filename of spec opts file"
   (if (rspec2-p)
       (expand-file-name ".rspec" (rspec-project-root))
-    (expand-file-name "spec_mode.opts" (rspec-spec-directory (rspec-project-root)))))
+    (expand-file-name "spec.opts" (rspec-spec-directory (rspec-project-root)))))
 
 (defun rspec-runner ()
   "Returns command line to run rspec"
