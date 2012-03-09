@@ -23,6 +23,7 @@
 (global-set-key "\C-ck" 'mode-compile-kill)
 
 (require 'rspec-mode)
+(setq rspec-use-rake-flag nil)
 (require 'rainbow-mode)
 
 (eval-after-load 'sass-mode
