@@ -1,4 +1,5 @@
 (setq-default show-trailing-whitespace t)
+(setq default-tab-width 2)
 (set-face-background 'trailing-whitespace "gray25")
 
 (color-theme-twilight)
