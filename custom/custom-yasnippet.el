@@ -1,7 +1,6 @@
 (add-to-list 'load-path (concat dotfiles-dir "/custom/plugins/yasnippet"))
 (require 'yasnippet)
-(yas/initialize)
-(add-to-list 'yas/snippet-dirs (concat dotfiles-dir "snippets") )
+(setq yas/snippet-dirs (concat dotfiles-dir "snippets") )
 (setq yas/trigger-key "SPC")
 (yas/global-mode 1)
 
