@@ -3,7 +3,6 @@
 (defvar custom-packages (list 'haml-mode
                               'sass-mode
                               'lua-mode
-                              'yasnippet-bundle
                               'smex)
   "Libraries that should be installed.")
 

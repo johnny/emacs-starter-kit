@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sum with variables
+# key: su
+# --
+\overset{${2:n}}{\underset{${1:i=1}}{\sum}} $0

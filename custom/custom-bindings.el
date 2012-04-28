@@ -52,5 +52,9 @@
 (global-set-key (kbd "C-c f") 'gpicker-find-file)
 (global-set-key (kbd "C-c C-f") 'gpicker-visit-project)
 (global-set-key (kbd "C-c b") 'bookmark-ido-find-file)
+(global-set-key (kbd "M-L") 'rinari-merb-rgrep-lib)
+(global-set-key (kbd "M-A") 'rinari-merb-rgrep-app)
+(global-set-key (kbd "M-S") 'rinari-merb-rgrep-spec)
+(global-set-key (kbd "<f8>")   'fd-switch-dictionary)
 
 (provide 'custom-bindings)

@@ -66,4 +66,45 @@
 
 (defun local-comment-auto-fill ())
 
+(defun rinari-merb-rgrep-lib (&optional arg)
+  "Search through the rails project for a string or `regexp'.
+With optional prefix argument just run `rgrep'."
+  (interactive "P")
+  (grep-compute-defaults)
+  (if arg (call-interactively 'rgrep)
+    (let ((word (thing-at-point 'word))
+          (dir (concat (rinari-merb-root) "lib")))
+      (funcall 'rgrep (read-from-minibuffer (concat "search in " dir " for: ") word)
+               rinari-merb-rgrep-file-endings dir))))
+
+(defun rinari-merb-rgrep-spec (&optional arg)
+  "Search through the rails project for a string or `regexp'.
+With optional prefix argument just run `rgrep'."
+  (interactive "P")
+  (grep-compute-defaults)
+  (if arg (call-interactively 'rgrep)
+    (let ((word (thing-at-point 'word))
+          (dir (concat (rinari-merb-root) "spec")))
+      (funcall 'rgrep (read-from-minibuffer (concat "search in " dir " for: ") word)
+               rinari-merb-rgrep-file-endings dir))))
+
+(defun rinari-merb-rgrep-app (&optional arg)
+  "Search through the rails project for a string or `regexp'.
+With optional prefix argument just run `rgrep'."
+  (interactive "P")
+  (grep-compute-defaults)
+  (if arg (call-interactively 'rgrep)
+    (let ((word (thing-at-point 'word))
+          (dir (concat (rinari-merb-root) "app")))
+      (funcall 'rgrep (read-from-minibuffer (concat "search in " dir " for: ") word)
+               rinari-merb-rgrep-file-endings dir))))
+
+(defun fd-switch-dictionary()
+  (interactive)
+  (let* ((dic ispell-current-dictionary)
+         (change (if (string= dic "de_DE-neu") "english" "de_DE-neu")))
+    (ispell-change-dictionary change)
+    (message "Dictionary switched from %s to %s" dic change)
+    ))
+
 (provide 'custom-functions)

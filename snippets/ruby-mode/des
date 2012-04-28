@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: describe 
+# key: des
+# --
+describe '${1:description}' do
+
+  it 'should ${2:description}' do
+    $0
+  end
+
+end

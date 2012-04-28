@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name : def ... end
+# key: def
+# condition: (line-blank-before-point?)
+# --
+def ${1:method_name}
+  $0
+end

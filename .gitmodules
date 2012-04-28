@@ -4,3 +4,6 @@
 [submodule "custom/plugins/rinari"]
 	path = custom/plugins/rinari
 	url = http://github.com/eschulte/rinari.git
+[submodule "custom/plugins/yasnippet"]
+	path = custom/plugins/yasnippet
+	url = https://github.com/capitaomorte/yasnippet

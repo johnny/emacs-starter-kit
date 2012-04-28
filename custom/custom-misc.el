@@ -28,16 +28,24 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; (require 'ac-math)
+
+;; (add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of {{{latex-mode}}}
+
+;; (defun ac-latex-mode-setup ()         ; add ac-sources to default ac-sources
+;;   (setq ac-sources
+;;      (append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
+;;                ac-sources))
+;; )
+
+;; (add-hook 'LaTeX-mode-hook 'ac-latex-mode-setup)
+;; (ac-flyspell-workaround)
+
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
 
 (require 'gpicker)
 (setq *gpicker-hook-ido* nil)
-
-;;; Load snippets
-(yas/load-directory (concat dotfiles-dir "/snippets"))
-
-(setq yas/trigger-key "SPC")
 
 (provide 'custom-misc)
 

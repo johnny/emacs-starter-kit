@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: \Omega
+# key: om
+# --
+\Omega_{${1:k|F}}^{${2:q}}$0
