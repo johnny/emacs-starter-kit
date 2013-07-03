@@ -2,10 +2,10 @@
 (global-set-key "\C-c#"  'comment-or-uncomment-region)
 (global-set-key (kbd "M-l") 'goto-line)
 
-(global-set-key (kbd "s-;") 'windmove-left)          ; move to left windnow
-(global-set-key (kbd "s-\\") 'windmove-right)        ; move to right window
-(global-set-key (kbd "s-[") 'windmove-up)              ; move to upper window
-(global-set-key (kbd "s-'") 'windmove-down)          ; move to downer window
+(global-set-key (kbd "C-s-h") 'windmove-left)          ; move to left windnow
+(global-set-key (kbd "C-s-n") 'windmove-right)        ; move to right window
+(global-set-key (kbd "C-s-c") 'windmove-up)              ; move to upper window
+(global-set-key (kbd "C-s-t") 'windmove-down)          ; move to downer window
 
 (defun comment-dwim-line (&optional arg)
   "Replacement for the comment-dwim command.
@@ -56,5 +56,9 @@
 (global-set-key (kbd "M-A") 'rinari-merb-rgrep-app)
 (global-set-key (kbd "M-S") 'rinari-merb-rgrep-spec)
 (global-set-key (kbd "<f8>")   'fd-switch-dictionary)
+(define-key global-map (kbd "C-@") 'ace-jump-mode)
 
+(eval-after-load "ace-jump-mode"
+  '(ace-jump-mode-enable-mark-sync))
+(define-key global-map (kbd "C-x C-@") 'ace-jump-mode-pop-mark)
 (provide 'custom-bindings)

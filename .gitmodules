@@ -7,3 +7,9 @@
 [submodule "custom/plugins/yasnippet"]
 	path = custom/plugins/yasnippet
 	url = https://github.com/capitaomorte/yasnippet
+[submodule "custom/plugins/coffee-mode"]
+	path = custom/plugins/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
+[submodule "custom/plugins/distel"]
+	path = custom/plugins/distel
+	url = https://github.com/massemanet/distel.git

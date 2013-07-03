@@ -10,6 +10,7 @@
 (require 'custom-ruby)
 (require 'custom-js)
 (require 'custom-tex)
+(require 'custom-erlang)
 (require 'custom-bindings)
 (require 'custom-ui)
 (require 'custom-functions)
