@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: describe Class
+# key: desc
+# --
+describe ${1:Class} do
+  $0
+end

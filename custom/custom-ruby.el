@@ -33,8 +33,8 @@
                )))
 
 ;;; rinari
-(add-to-list 'load-path (concat dotfiles-dir "/custom/plugins/rinari") )
-(require 'rinari-merb)
+;; (add-to-list 'load-path (concat dotfiles-dir "/custom/plugins/rinari") )
+;; (require 'rinari-merb)
 
 (provide 'custom-ruby)
 

@@ -13,6 +13,8 @@
 
 ;; automatically chmod u+x
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+;; remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; setup org-mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -45,5 +47,16 @@
 (require 'gpicker)
 (setq *gpicker-hook-ido* nil)
 
-(provide 'custom-misc)
+(projectile-global-mode)
+(setq projectile-indexing-method 'native)
 
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
+
+
+(provide 'custom-misc)

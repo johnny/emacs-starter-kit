@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name: it
-# key: it
+# name: context
+# key: context
 # condition: (line-blank-before-point?)
 # --
-it '${1:description}' do
+context '${1:description}' do
   $0
 end

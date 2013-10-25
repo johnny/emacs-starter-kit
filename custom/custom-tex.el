@@ -8,8 +8,6 @@
  (add-hook 'LaTeX-mode-hook (lambda ()
                                   (reftex-mode 1)
                                   (TeX-fold-mode 1)))
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
 
 (add-to-list 'load-path (concat dotfiles-dir "/custom/plugins/whizzytex"))
 (autoload 'whizzytex-mode "whizzytex"

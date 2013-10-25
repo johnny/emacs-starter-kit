@@ -3,7 +3,13 @@
 (defvar custom-packages (list 'haml-mode
                               'sass-mode
                               'lua-mode
-                              'smex)
+                              'smex
+                              'auto-complete
+                              'flymake-jshint
+                              'auctex
+                              'erlang
+                              'projectile
+                              'ido-flx)
   "Libraries that should be installed.")
 
 (defun custom-elpa-install ()
