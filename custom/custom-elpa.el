@@ -3,6 +3,7 @@
 (defvar custom-packages (list 'haml-mode
                               'sass-mode
                               'lua-mode
+                              'coffee-mode
                               'smex
                               'auto-complete
                               'flymake-jshint
