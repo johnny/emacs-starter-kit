@@ -9,7 +9,9 @@
                               'auctex
                               'erlang
                               'projectile
-                              'ido-flx)
+                              'flx-ido
+                              'multiple-cursors
+                              )
   "Libraries that should be installed.")
 
 (defun custom-elpa-install ()

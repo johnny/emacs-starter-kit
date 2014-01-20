@@ -56,6 +56,8 @@
 (global-set-key (kbd "M-A") 'rinari-merb-rgrep-app)
 (global-set-key (kbd "M-S") 'rinari-merb-rgrep-spec)
 (global-set-key (kbd "<f8>")   'fd-switch-dictionary)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (define-key global-map (kbd "C-@") 'ace-jump-mode)
 
 (eval-after-load "ace-jump-mode"

@@ -48,7 +48,7 @@
 (setq *gpicker-hook-ido* nil)
 
 (projectile-global-mode)
-(setq projectile-indexing-method 'native)
+(setq projectile-enable-caching t)
 
 (require 'flx-ido)
 (ido-mode 1)

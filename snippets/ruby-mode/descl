@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: describe Class
-# key: desc
+# key: descl
 # --
 describe ${1:Class} do
   $0

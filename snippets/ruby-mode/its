@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: let
-# key: let
+# name: its
+# key: its
 # condition: (line-blank-before-point?)
 # --
-let(:${1:variable}) { $0 }
+its(:${1:variable}) { $0 }
